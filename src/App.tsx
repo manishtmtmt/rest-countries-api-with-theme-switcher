@@ -38,6 +38,7 @@ const App = () => {
     const query = e.target.value;
     setSearchQuery(query);
     filterCountries(query);
+    setPage(1);
   };
 
   const filterCountries = (query: string) => {
@@ -92,7 +93,7 @@ const App = () => {
         theme === "dark" ? "dark" : "light"
       } text-foreground bg-background`}
     >
-      <div className="px-16 box-shadow-md flex items-center justify-between min-h-[10vh] shadow-md">
+      <div className="px-8 md:px-16 py-4 box-shadow-md flex items-center justify-between min-h-[10vh] shadow-md">
         <p className="text-3xl font-bold">Where in the world?</p>
         <div className="cursor-pointer" onClick={() => toggleTheme()}>
           {theme === "light" ? (
@@ -108,7 +109,7 @@ const App = () => {
           )}
         </div>
       </div>
-      <div className="px-16 py-8 min-h-[90vh] flex flex-col gap-4">
+      <div className="lg:px-16 px-8 py-8 min-h-[90vh] flex flex-col gap-4">
         <div className="flex justify-between flex-wrap gap-4">
           <div className="md:w-1/3 lg:w-1/4 w-full">
             <Input
@@ -125,7 +126,7 @@ const App = () => {
           </div>
           <div className="md:w-1/3 lg:w-1/4 w-full flex gap-3 justify-end">
             <Select
-              className="max-w-xs p-0"
+              className="w-full p-0"
               label="Filter by Region"
               variant="bordered"
               value={selectedRegion}
