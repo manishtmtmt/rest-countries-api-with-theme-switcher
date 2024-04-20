@@ -109,7 +109,7 @@ const App = () => {
           )}
         </div>
       </div>
-      <div className="lg:px-16 px-8 py-8 min-h-[90vh] flex flex-col gap-4">
+      <div className="md:px-16 px-8 py-8 min-h-[90vh] flex flex-col gap-4">
         <div className="flex justify-between flex-wrap gap-4">
           <div className="md:w-1/3 lg:w-1/4 w-full">
             <Input
